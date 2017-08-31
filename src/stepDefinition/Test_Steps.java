@@ -13,7 +13,7 @@ import cucumber.api.java.en.When;
 
 
 public class Test_Steps {
-	public static WebDriver driver ;
+	public static WebDriver driver;
 	@Given("^User is on Home Page$")
 	public void user_is_on_Home_Page() throws Throwable {
 		File file = new File(".\\src\\drivers\\geckodriver.exe");
