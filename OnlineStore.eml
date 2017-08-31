@@ -4,7 +4,6 @@
 	<contentEntry url="file://$MODULE_DIR$">
 		<excludeFolder url="file://$MODULE_DIR$/target"/>
 	</contentEntry>
-	<lib name="Maven: info.cukes:cucumber-java:1.2.5" scope="TEST"/>
 	<lib name="Maven: info.cukes:cucumber-junit:1.2.5" scope="TEST"/>
 	<lib name="Maven: net.sourceforge.cobertura:cobertura:2.1.1" scope="TEST"/>
 	<lib name="Maven: org.ow2.asm:asm:5.0.1" scope="TEST"/>
