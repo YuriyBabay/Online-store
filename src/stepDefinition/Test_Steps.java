@@ -31,12 +31,12 @@ public class Test_Steps {
 		driver.findElement(By.xpath(".//*[@id='account']/a")).click();
 		}
 
-	@When("^User enters UserName and Password$")
-	public void user_enters_UserName_and_Password() throws Throwable {
-		driver.findElement(By.id("log")).sendKeys("ybabay"); 	 
-	    driver.findElement(By.id("pwd")).sendKeys("CtdpAiDoz&TZJ8vc");
-	    driver.findElement(By.id("login")).click();
-		}
+	@When("^User enters \"(.*)\" and \"(.*)\"$")
+	public void user_enters_UserName_and_Password(String username, String password) throws Throwable {
+		driver.findElement(By.id("log")).sendKeys(username);
+		driver.findElement(By.id("pwd")).sendKeys(password);
+		driver.findElement(By.id("login")).click();
+	}
 
 	@Then("^Message displayed Login Successfully$")
 	public void message_displayed_Login_Successfully() throws Throwable {
@@ -55,7 +55,8 @@ public class Test_Steps {
 	@Then("^Close Browser$")
 	public void close_browser() throws Throwable {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.quit();
+		Thread.sleep(1000);
+		driver.close();
 		System.out.println("Browser closed");
 	}
 }
