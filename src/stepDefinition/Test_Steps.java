@@ -16,7 +16,7 @@ import com.google.common.util.concurrent.SimpleTimeLimiter;
 
 
 public class Test_Steps {
-	public static WebDriver driver;
+	private static WebDriver driver;
 	@Given("^User is on Home Page$")
 	public void user_is_on_Home_Page() throws Throwable {
 		File file = new File(".\\src\\drivers\\geckodriver.exe");
@@ -56,7 +56,7 @@ public class Test_Steps {
 	public void close_browser() throws Throwable {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		Thread.sleep(5000);
-		driver.close();
+		driver.quit();
 		System.out.println("Browser closed");
 	}
 }
