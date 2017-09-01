@@ -55,7 +55,6 @@ public class Test_Steps {
 	@Then("^Close Browser$")
 	public void close_browser() throws Throwable {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		Thread.sleep(5000);
 		driver.quit();
 		System.out.println("Browser closed");
 	}

@@ -11,6 +11,6 @@ import org.junit.runner.RunWith;
 		,glue={"stepDefinition"}
 		)
 
-public class TestRunner {  
+public class TestRunner {
 
 }
