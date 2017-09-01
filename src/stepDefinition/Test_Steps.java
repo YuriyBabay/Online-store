@@ -6,14 +6,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import java.io.File;
-
+import java.lang.Thread;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import com.google.common.util.concurrent.SimpleTimeLimiter;
+
+
 
 
 public class Test_Steps {
-	public static WebDriver driver;
+	private static WebDriver driver;
 	@Given("^User is on Home Page$")
 	public void user_is_on_Home_Page() throws Throwable {
 		File file = new File(".\\src\\drivers\\geckodriver.exe");
@@ -52,6 +55,7 @@ public class Test_Steps {
 	@Then("^Close Browser$")
 	public void close_browser() throws Throwable {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		Thread.sleep(5000);
 		driver.quit();
 		System.out.println("Browser closed");
 	}
