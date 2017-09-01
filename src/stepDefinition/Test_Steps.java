@@ -6,10 +6,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import java.io.File;
-
+import java.lang.Thread;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import com.google.common.util.concurrent.SimpleTimeLimiter;
+
+
 
 
 public class Test_Steps {
@@ -52,7 +55,8 @@ public class Test_Steps {
 	@Then("^Close Browser$")
 	public void close_browser() throws Throwable {
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.quit();
+		Thread.sleep(5000);
+		driver.close();
 		System.out.println("Browser closed");
 	}
 }
