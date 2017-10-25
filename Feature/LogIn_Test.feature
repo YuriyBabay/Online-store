@@ -7,7 +7,7 @@ Scenario Outline: Successful Login with Valid Credentials
 	Then Message displayed Login Successfully
 	Examples:
 		| username | password |
-		| ybabay | CtdpAiDoz&TZJ8vc |
+		| ybabay | Qwerty12 |
 		| babay_test | tGeCAfc!c0pF3JiC |
 Scenario: Successful LogOut
 	When User LogOut from the Application
