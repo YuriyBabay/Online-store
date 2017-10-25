@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OnlineStore.iml" filepath="$PROJECT_DIR$/OnlineStore.iml" />
       <module fileurl="file://$PROJECT_DIR$/../SeleniumProject/SeleniumProject.iml" filepath="$PROJECT_DIR$/../SeleniumProject/SeleniumProject.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../SeleniumProject/SeleniumProject.iml" filepath="$PROJECT_DIR$/../SeleniumProject/SeleniumProject.iml" />
     </modules>
   </component>
 </project>
